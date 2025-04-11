@@ -79,4 +79,4 @@ This project is under active development. Contributions are welcome through pull
 
 ## License
 
-This project is proprietary and confidential. All rights reserved. 
+This project is proprietary and confidential. All rights reserved.
