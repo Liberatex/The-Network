@@ -1,0 +1,1 @@
+// Backend logic placeholder for security and expansion

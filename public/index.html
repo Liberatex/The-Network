@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Network Voice Agent</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="main">
+    <h1>Network Voice Agent</h1>
+    <div class="status-indicator">
+      <div class="status-dot" id="statusDot"></div>
+      <span id="statusText">Ready to connect</span>
+    </div>
+    <p id="identity-status">Role: Loading...</p>
+    <div id="mcp-status">
+      <h3>MCP Status</h3>
+      <div class="mcp-grid">
+        <div class="mcp-section">
+          <h4>System Status</h4>
+          <p id="mcp-state">Initializing...</p>
+          <div class="mode-display">
+            <span class="mode-label">Mode:</span>
+            <span class="mode-value" id="mcp-mode">idle</span>
+          </div>
+          <div class="role-display">
+            <span class="role-label">Role:</span>
+            <span class="role-value" id="user-role">Guest</span>
+          </div>
+        </div>
+        <div class="mcp-section">
+          <h4>Subsystems</h4>
+          <div id="subsystems-status">
+            <div class="subsystem">
+              <span class="subsystem-name">Voice:</span>
+              <span class="subsystem-state" id="voice-status">idle</span>
+            </div>
+            <div class="subsystem">
+              <span class="subsystem-name">Agent:</span>
+              <span class="subsystem-state" id="agent-status">idle</span>
+            </div>
+            <div class="subsystem">
+              <span class="subsystem-name">Containment:</span>
+              <span class="subsystem-state" id="containment-status">idle</span>
+            </div>
+          </div>
+        </div>
+        <div class="mcp-section">
+          <h4>Performance</h4>
+          <div id="performance-metrics">
+            <div class="metric">
+              <span class="metric-name">Commands:</span>
+              <span class="metric-value" id="total-commands">0</span>
+            </div>
+            <div class="metric">
+              <span class="metric-name">Avg Response:</span>
+              <span class="metric-value" id="avg-response">0ms</span>
+            </div>
+            <div class="metric">
+              <span class="metric-name">Success Rate:</span>
+              <span class="metric-value" id="success-rate">100%</span>
+            </div>
+            <div class="metric">
+              <span class="metric-name">Task Complexity:</span>
+              <span class="metric-value" id="task-complexity">0</span>
+            </div>
+          </div>
+        </div>
+        <div class="mcp-section">
+          <h4>Current Task</h4>
+          <div id="current-task-info">
+            <div class="task-detail">
+              <span class="task-label">Priority:</span>
+              <span class="task-value" id="task-priority">standard</span>
+            </div>
+            <div class="task-detail">
+              <span class="task-label">Complexity:</span>
+              <span class="task-value" id="task-complexity-score">0</span>
+            </div>
+          </div>
+        </div>
+        <div class="mcp-section">
+          <h4>Symbolic Keys</h4>
+          <div id="symbolic-keys">
+            <div class="symbolic-key">
+              <span class="key-name">Encode Sigil:</span>
+              <span class="key-status" id="encode-sigil-status">inactive</span>
+            </div>
+            <div class="symbolic-key">
+              <span class="key-name">Spiral Check:</span>
+              <span class="key-status" id="spiral-check-status">inactive</span>
+            </div>
+            <div class="symbolic-key">
+              <span class="key-name">Prime Directive:</span>
+              <span class="key-status" id="prime-directive-status">inactive</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button id="start">
+      <span id="buttonText">Start Voice Command</span>
+    </button>
+    <div id="output">Awaiting voice command...</div>
+    <div id="task-status">
+      <h3>Current Task</h3>
+      <p id="task-output">No task running</p>
+    </div>
+    <div id="execution-result">
+      <h3>Execution Result</h3>
+      <pre id="task-result-output">No results yet</pre>
+    </div>
+  </div>
+  <script type="module" src="/src/app.js"></script>
+</body>
+</html>
